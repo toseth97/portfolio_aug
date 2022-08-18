@@ -11,16 +11,26 @@ const Home = () => {
     <main className="parent Home_main">
       <div className="container_flex Home_submain">
         <div className="row_1">
-          <h1>Hi, I am Tobiloba !  &#x270C;</h1>
+          <h1>Hi, I am Tobiloba !  
+            <span >
+            <img className='hand_emoji' src='./hand_emoji.png' alt='hand_emoji' />
+            
+            </span> 
+          </h1>
           <div className='typewriter'>
             <Typewriter
               options={{
-                strings: ['I am a Front-End Developer', 'Student @ ALX SE', 'On my way toFull'],
+                strings: ['Front-End Developer','Making Your Product Wonderful' ,'Follow Me On Twitter','Student @ ALX SE' ],
                 autoStart: true,
                 loop: true,
               }}
             />
           </div>
+          < div className='cv_button'>
+            <button className='default_button linearGradient'>Hire Me</button>
+            <button className='default_button linearGradient_border'>View Resume</button>
+          </div>
+
         </div>
         <div className="row_2">
           <div className="blobby">
@@ -48,10 +58,7 @@ const Home = () => {
                 M386,305Q360,360,305,421Q250,482,200.5,415.5Q151,349,117.5,299.5Q84,250,119,202Q154,154,202,89.5Q250,25,318,69.5Q386,114,399,182Q412,250,386,305Z;
 
                 M393.5,315.5Q381,381,315.5,386Q250,391,186,384.5Q122,378,95.5,314Q69,250,81,171.5Q93,93,171.5,82Q250,71,303,107.5Q356,144,381,197Q406,250,393.5,315.5Z
-
-               
                 " >
-                   
                 </animate>
               </path></g>
           </svg>

@@ -79,6 +79,7 @@ body, .App{
 .Home_main{
   background-color: var(--Nav_primary_color);
   width: 100%;
+  padding-bottom: 10rem;
 }
 
 .Home_submain{
@@ -90,17 +91,90 @@ body, .App{
   
 }
 .row_1 h1{
-  background-image: linear-gradient(to left, var(--primary_one), var(--primary_two));
+  background-image: linear-gradient(to right, var(--primary_one), var(--primary_two));
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
-        font-size: 2.8rem;
+        font-size: 3rem;
+}
+.hand_emoji{
+  width: 50px;
+  margin: 0 .5rem;
 }
 .typewriter{
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   color: var(--Secondary_color);
 }
+.blobby{
+  width: 30rem;
+  /* background-color: aqua; */
+}
+
+.default_button{
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: var(--Secondary_color);
+  font-size: 1rem;
+}
+.linearGradient{
+  background-image: linear-gradient(to right, var(--primary_one), var(--primary_two));
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.linearGradient_border{
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  
+ 
+}
+.linearGradient_border::before{
+  content: "View Resume";
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  border-radius: 10px;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: var(--Nav_primary_color);
+}
+.linearGradient_border::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  color: #5E58E9;
+  background-image: conic-gradient(#229BF1 0deg, #229BF1 90deg, transparent 130deg, transparent 180deg, #229BF1 310deg, #229BF1 360deg);
+  animation: moving_border 10s infinite linear;
+  transform: translate(-50%, -50%);
+}
+.linearGradient_border:hover::after{
+  animation: moving_border 2s infinite linear;
+}
+
+@keyframes moving_border {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform:  rotate(360deg);
+  }
+}
+
 
 
 
