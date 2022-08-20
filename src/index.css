@@ -5,6 +5,7 @@
   --Secondary_color: #fff;
   --primary_one: #229BF1;
   --primary_two: #5E58E9;
+  --body: #181721;
 }
 
 ::-webkit-scrollbar{
@@ -122,10 +123,15 @@ body, .App{
   font-size: 1rem;
 }
 .linearGradient{
-  background-image: linear-gradient(to right, var(--primary_one), var(--primary_two));
+  background-image: linear-gradient( var(--primary_one), var(--primary_two));
   background-repeat: no-repeat;
   background-size: cover;
+  transition: .3s ease;
   
+}
+.linearGradient:hover{
+  background-image: linear-gradient(135deg, var(--primary_one), var(--primary_two));
+  transition: .3s ease;
 }
 .linearGradient_border{
   background-color: transparent;
@@ -175,6 +181,21 @@ body, .App{
   }
 }
 
+.cv_button a, .cv_button button{
+  cursor: pointer;
+}
+
+.Projects{
+  padding: 5rem 0;
+  background-color: var(--body);
+  color: var(--Secondary_color);
+}
+.Project_list{
+  background-color: var(--Nav_primary_color);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  width: 18rem;
+}
 
 
 

@@ -27,8 +27,12 @@ const Home = () => {
             />
           </div>
           < div className='cv_button'>
-            <button className='default_button linearGradient'>Hire Me</button>
-            <button className='default_button linearGradient_border'>View Resume</button>
+            <a href=''>
+              <button className='default_button linearGradient'>Hire Me</button>
+            </a>
+            <a href=''>
+              <button className='default_button linearGradient_border'>View Resume</button>
+            </a>
           </div>
 
         </div>
