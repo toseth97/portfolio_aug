@@ -14,6 +14,9 @@
 ::-webkit-scrollbar-thumb{
   background-image: linear-gradient(to bottom, var(--primary_one), var(--primary_two));
 }
+::-webkit-scrollbar-track{
+  background-color: var(--body) ;
+}
 
 body, .App{
   margin: 0;
