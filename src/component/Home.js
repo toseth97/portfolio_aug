@@ -8,7 +8,7 @@ const Home = () => {
  
 
   return (
-    <main className="parent Home_main">
+    <main className="parent Home_main" id='home'>
       <div className="container_flex Home_submain">
         <div className="row_1">
           <h1>Hi, I am Tobiloba !  

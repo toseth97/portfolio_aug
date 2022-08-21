@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'); */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 :root{
   --Nav_primary_color: #232135;
   --Secondary_color: #fff;
@@ -9,21 +10,23 @@
 }
 
 ::-webkit-scrollbar{
-  width: 5px;
+  width: 4px;
 }
 ::-webkit-scrollbar-thumb{
   background-image: linear-gradient(to bottom, var(--primary_one), var(--primary_two));
 }
+
 ::-webkit-scrollbar-track{
   background-color: var(--body) ;
 }
+
 
 body, .App{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 html{
   scroll-behavior: smooth;
@@ -50,8 +53,13 @@ html{
   z-index: 5;
   filter: drop-shadow(0 1px 10px rgba(10, 9, 9, 0.795));
 }
-
+.Nav_submain a{
+  text-decoration: none;
+  color: var(--Secondary_color);
+}
 .Nav_ul{
+  display: flex;
+  gap: 1rem;
   list-style: none;
   width: 20rem;
   overflow-y: hidden;
@@ -63,6 +71,7 @@ html{
   cursor: pointer;
   position: relative;
 }
+
 .Nav_li a{
   text-decoration: none;
   color: var(--Secondary_color);
@@ -86,6 +95,61 @@ html{
   opacity: 1;
   top: 2.5rem;
 }
+.hamburger{
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .3s ease;
+  display: none;
+}
+
+.bar{
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--Secondary_color);
+  position: relative;
+  transition: .3s ease;
+  left: 0;
+  box-shadow: 0 -2px 5px rgba(185, 185, 185, 0.2);
+  
+}
+
+.bar::before, .bar::after{
+  content: "";
+  position: absolute;
+  background-color: var(--Secondary_color);
+  width: inherit;
+  height: inherit;
+  transition: .6s ease;
+}
+.bar::before{
+  transform: translateY(7px);
+}
+.bar::after{
+  transform: translateY(-7px);
+}
+.hamburger.active .bar{
+  background-color: transparent;
+}
+.hamburger.active .bar::before{
+  transform: rotate(135deg);
+}
+.hamburger.active .bar::after{
+  transform: rotate(45deg);
+}
+
+
+
+
+
+/*Home*/
+
+
+
+
 
 .Home_main{
   background-color: var(--Nav_primary_color);
@@ -196,8 +260,10 @@ html{
   cursor: pointer;
 }
 
-.Projects{
-  padding: 5rem 0;
+
+
+.Projects, .about{
+  padding: 5rem 0 3rem;
   background-color: var(--body);
   color: var(--Secondary_color);
   display: flex;
@@ -221,7 +287,7 @@ html{
   background-color: var(--Nav_primary_color);
   border-radius: 10px;
   padding: 3rem 1rem;
-  width: 18rem;
+  width: 15rem;
 }
 .project_description{
   height: 50px;
@@ -242,11 +308,16 @@ html{
   background-color: var(--primary_one);
   color: var(--Secondary_color);
 }
+.web_section{
+  padding: 7rem 0 2rem;
+}
 .web{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .bx{
@@ -257,6 +328,207 @@ html{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 120px;
+  width: 9rem;
+}
+.Web_Items a button{
+  cursor: pointer;
+}
+.lets_connect{
+  font-size: 1rem;
 }
 
+
+
+/* About Section */
+
+.about_submain{
+  flex-direction: column;
+  width: 80%;
+}
+.know_me{
+  padding: 1rem 0;
+}
+.skill_icon{
+  font-size: 7rem;
+  padding: .2rem;
+  background-color: #fff;
+  color: #181721;
+  margin:.5rem;
+  border-radius: 10px;
+  transition: .5s ease;
+}
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+.html:hover{
+  color: rgb(212, 80, 80);
+}
+.css:hover{
+  color: #5E58E9;
+}
+.js:hover{
+  color: rgb(155, 155, 62);
+}
+.react:hover{
+  color: rgb(19, 185, 240);
+}
+.firebase:hover{
+  color: rgb(214, 183, 8);
+}
+
+
+
+@media screen and (max-width:1000px) {
+  .container_flex{
+    width: 85%;
+  }
+  .row_1{
+    width: 70%;
+    
+  }
+  .row_1 h1{
+    font-size: 3rem;
+  }
+  .blobby{
+    width: 20rem;
+    /* background-color: aqua; */
+  }
+  .skills{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width:850px) {
+  .container_flex{
+    width: 90%;
+  }
+  .row_1{
+    width: 70%;
+    
+  }
+  .row_1 h1{
+    font-size: 2rem;
+  }
+  .typewriter{
+    font-size: 1.3rem;
+  }
+  .blobby{
+    width: 20rem;
+    /* background-color: aqua; */
+  }
+  .skills{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .container{
+    width: 90%;
+  }
+  .Project_list{
+    padding: 3rem 1rem;
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .blobby{
+    width: 17rem;
+  }
+  .web{
+    gap: 2rem;
+  }
+  .skill_icon{
+    font-size: 5rem;
+    transition: .5s ease;
+  }
+}
+
+
+@media screen and (max-width:540px) {
+  .Nav_ul{
+    position: absolute;
+    flex-direction: column;
+    padding-top: 10rem;
+    width: 90%;
+    height: 100vh;
+    top: 55px;
+    left: -100%;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--Nav_primary_color);
+    transition: .5s ease;
+  }
+  .Nav_li{
+    font-size: 1.3rem;
+  }
+  .Nav_ul.active{
+    left: 0;
+  }
+  
+  
+  
+  .Nav_li:hover::before{
+    opacity: 1;
+    top: 3rem;
+  } 
+  .hamburger{
+    display: block;
+  }
+  .row_1{
+    width: 100%;
+  }
+  .row_2{
+    display: none;
+  }
+  .projects_item_main{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .Project_list{
+    padding: 3rem 1rem;
+    width: 100%;
+  }
+  .skill_icon{
+    font-size: 5rem;
+  }
+  .Web_Items{
+    width: 35%;
+  }
+  .lets_connect{
+    font-size: .8rem;
+  }
+  .container_main{
+    width: 90%;
+  }
+  .web{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .Web_Items{
+    width: 35%;
+  }
+  .skill_icon{
+    font-size: 4rem;
+  }
+
+}
+@media screen and (max-width:380px) {
+  .skill_icon{
+    font-size: 3rem;
+  }
+  .Web_Items{
+    width: 30%;
+  }
+  .lets_connect{
+    font-size: .6rem;
+  }
+  
+}
