@@ -4,10 +4,10 @@ const Project_list = (current) => {
     const item = current.current
   return (
     <div className='Project_list'>
-        <div className=''>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <div>
+        <div>
+            <h2>{item.title}</h2>
+            <p className='project_description'>{item.description}</p>
+            <div className='project_links'>
                 <a target='_blank' href={item.live}>
                     <button> Live </button>
                 </a>

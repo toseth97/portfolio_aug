@@ -1,8 +1,9 @@
 import React from 'react'
-import Project_list from './Project_list'
+import ProjectList from './ProjectList'
+import WebLink from './WebLink'
 
 const Projects = () => {
-    const projects = [
+    const projects=[
         {
             id: 1,
             title: 'He-code E-commerce',
@@ -26,12 +27,56 @@ const Projects = () => {
         }
     ]
 
+    const web = [
+        {
+            id: 1,
+            link: "",
+            Name: "Instagram",
+            img: 'bx bxl-instagram-alt',
+            color: '#C13584',
+        },
+        {
+            id: 2,
+            link: "",
+            Name: "Twitter",
+            img: 'bx bxl-twitter',
+            color: "#1DA1F2"
+        },
+        {
+            id: 3,
+            link: "",
+            Name: "GitHub",
+            img: 'bx bxl-github',
+            color: "#FFFFFF"
+        },
+        {
+            id:4,
+            link: "",
+            Name: "LinkedIn",
+            img: 'bx bxl-linkedin-square',
+            color: "#0077B5"
+        }
+
+    ]
+
   return (
-    <main className='parent Projects'>
-        <div className='container_flex'>
-            {projects.map(current => {
-                return <Project_list current = {current} />
-            })}
+    <main className='Projects' id='Projects'>
+        
+        <div className='container_main'>
+            <h1>My Projects</h1>
+            <div className='container'>
+                {projects.map(current => {
+                    return <ProjectList key={current.id} current={current} />
+                })}
+            </div>
+            <div>
+                <h2>Find me @ Web</h2>
+                <div className='web'>
+                    {web.map(current => {
+                        return <WebLink key={current.id} current={current}/>
+                    })}
+                </div>
+            </div>
         </div>
     </main>
   )

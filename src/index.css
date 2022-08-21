@@ -25,6 +25,9 @@ body, .App{
   width: 100%;
   font-family: 'Lato', sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 .parent{
   width: 100%;
@@ -42,6 +45,10 @@ body, .App{
 .Nav_main{
   background-color: var(--Nav_primary_color);
   color: var(--Secondary_color);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  filter: drop-shadow(0 1px 10px rgba(10, 9, 9, 0.795));
 }
 
 .Nav_ul{
@@ -83,7 +90,7 @@ body, .App{
 .Home_main{
   background-color: var(--Nav_primary_color);
   width: 100%;
-  padding-bottom: 10rem;
+  padding: 8rem 0;
 }
 
 .Home_submain{
@@ -95,13 +102,14 @@ body, .App{
   
 }
 .row_1 h1{
-  background-image: linear-gradient(to right, var(--primary_one), var(--primary_two));
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        font-size: 3rem;
+  background-image: linear-gradient(var(--primary_one), var(--primary_two));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
 }
+
 .hand_emoji{
   width: 50px;
   margin: 0 .5rem;
@@ -192,13 +200,63 @@ body, .App{
   padding: 5rem 0;
   background-color: var(--body);
   color: var(--Secondary_color);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  
+}
+.container_main{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 80%;
 }
 .Project_list{
   background-color: var(--Nav_primary_color);
   border-radius: 10px;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   width: 18rem;
 }
+.project_description{
+  height: 50px;
+}
+.project_links a button{
+  padding: 0.2rem;
+  margin-right: 1rem;
+  width: 5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.project_links a button:hover{
+  background-color: var(--primary_one);
+  color: var(--Secondary_color);
+}
+.web{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 
-
+.bx{
+  font-size: 3rem;
+}
+.Web_Items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 120px;
+}
 
