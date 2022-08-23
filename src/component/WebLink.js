@@ -7,10 +7,10 @@ const WebLink = (current) => {
     console.log(color)
   return (
     <div className='Web_Items' style={{padding:"2rem 1rem",
-        borderWidth:"1px",
+        borderWidth:"2px",
         borderStyle:"solid",
         boxSizing:"content-box",
-        borderImage:`linear-gradient(225deg, ${color}, #6353E7)`,
+        borderImage:`linear-gradient(225deg, ${color}, #2b6777)`,
         borderImageSlice: "1"
     
     

@@ -2,11 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 :root{
-  --Nav_primary_color: #232135;
+  --Nav_primary_color: #141850;
   --Secondary_color: #fff;
-  --primary_one: #229BF1;
-  --primary_two: #5E58E9;
-  --body: #181721;
+  --primary_one: rgb(124, 193, 203);
+  --primary_two: #595a98;
+  --body: #303179;
 }
 
 ::-webkit-scrollbar{
@@ -314,7 +314,7 @@ html{
 .web{
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
