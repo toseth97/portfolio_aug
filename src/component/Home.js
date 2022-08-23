@@ -18,13 +18,7 @@ const Home = () => {
             </span> 
           </h1>
           <div className='typewriter'>
-            <Typewriter
-              options={{
-                strings: ['Front-End Developer','Making Your Product Wonderful' ,'Follow Me On Twitter','Student @ ALX SE' ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            Front-End Developer, ALX SE Student
           </div>
           < div className='cv_button'>
             <a href=''>
